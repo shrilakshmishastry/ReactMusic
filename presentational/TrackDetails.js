@@ -11,30 +11,32 @@ onTitlePress,
 onArtistPress
 
 })=>{
-    <Container>
+    return(
+    <Container  style={{padding:20,backgroundColor:'black'}}>
         <Grid>
             <Row>
-                <Col>
+
+                <Col size={1}  >
                     <TouchableOpacity onPress={onAddPress}>
-                        <Icon type="FontAwesome5" name="creative-commons-sampling-plus" />
+                        <Icon style={{color:'white'}} type="FontAwesome5" name="creative-commons-sampling-plus" />
                     </TouchableOpacity>
                 </Col>
-                <Col>
-                    <Text onPress={onTitlePress}>
-                        {Title}
+                <Col size={2}>
+                    <Text onPress={onTitlePress} style={{color:'white'}}>
+                        {title}
                     </Text>
-                    <Text onPress="onArtistPress">
+                    <Text onPress="onArtistPress" style={{color:'white'}}>
                         {artist}
                     </Text>
                 </Col>
-                <Col>
+                <Col size={1}>
                 <TouchableOpacity onPress={onMorePress}>
-                    <Icon type="FontAwesome" name="circle-o-notch" />
+                    <Icon type="FontAwesome" name="circle-o-notch" style={{color:'white'}} />
                 </TouchableOpacity>
                 </Col>
             </Row>
         </Grid>
     </Container>
-
+);
 }
 export default TrackDetails

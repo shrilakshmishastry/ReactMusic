@@ -1,25 +1,40 @@
-import React from 'react';
-import {View,Text,Image,TouchableOpacity} from 'react-native';
-import {Card,CardItem,Container} from 'native-base';
+import React, { Component } from 'react';
 
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableHighlight,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 
-const AlbumArt = ({url,onPress}) =>{
-return(
-    <Container style={{height:100,backgroundColor:'black'}}>
-        <Card>
-            <CardItem cardBody>
-                <TouchableOpacity onPress={onPress}>
-                    <Image source={{uri:url}} style={{height: 100, width: 100, flex: 1}} />
-                </TouchableOpacity>
-                <Text>
-                    hello
-                </Text>
-            </CardItem>
-        </Card>
-    </Container>
+const AlbumArt = ({
+  url,
+  onPress
+}) => (
 
-    );
+    <TouchableOpacity onPress={onPress}>
+      <Image
+        style={styles.image}
+        source={{uri: url}}
+      />
 
-}
+    </TouchableOpacity>
+
+);
 
 export default AlbumArt;
+
+const { width, height } = Dimensions.get('window');
+const imageSize = width ;
+
+const styles = StyleSheet.create({
+
+  image: {
+    width: imageSize,
+    height: imageSize,
+
+  },
+})
