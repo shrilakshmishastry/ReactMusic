@@ -22,15 +22,15 @@ onArtistPress
                     </TouchableOpacity>
                 </Col>
                 <Col size={2}>
-                    <Text onPress={onTitlePress} style={{color:'white'}}>
+                    <Text style={{color:'white'}}>
                         {title}
                     </Text>
-                    <Text onPress="onArtistPress" style={{color:'white'}}>
+                    <Text style={{color:'white'}}>
                         {artist}
                     </Text>
                 </Col>
                 <Col size={1}>
-                <TouchableOpacity onPress={onMorePress}>
+                <TouchableOpacity >
                     <Icon type="FontAwesome" name="circle-o-notch" style={{color:'white'}} />
                 </TouchableOpacity>
                 </Col>

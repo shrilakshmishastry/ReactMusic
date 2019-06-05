@@ -15,7 +15,7 @@ const AlbumArt = ({
   onPress
 }) => (
 
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity >
       <Image
         style={styles.image}
         source={{uri: url}}

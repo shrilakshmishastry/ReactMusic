@@ -7,11 +7,11 @@ import {Text,View,TouchableOpacity} from 'react-native';
 const HeaderIcon = ({message,onDownPress,onQueuePress,onMessagePress}) =>{
     return(
         <Container>
-            <Header>
+            <Header style={{backgroundColor:'black'}}>
              <Left >
                 <TouchableOpacity onPress={onDownPress}>
 
-                    <Icon type="FontAwesome5" name="caret-down" />
+                    <Icon style={{color:'white'}} type="FontAwesome5" name="caret-down" />
 
                 </TouchableOpacity>
              </Left>
@@ -19,12 +19,12 @@ const HeaderIcon = ({message,onDownPress,onQueuePress,onMessagePress}) =>{
                <Title>
                 <Text onPress={onMessagePress}>
                 {message.toUpperCase()}
-                </Text>
+               </Text>
                </Title>
              </Body>
              <Right>
                 <TouchableOpacity onPress={onQueuePress}>
-                        <Icon type="FontAwesome5" name="bars" />
+                        <Icon style={{color:'white'}} type="FontAwesome5" name="bars" />
                 </TouchableOpacity>
              </Right>
             </Header>
