@@ -3,7 +3,7 @@ A music player interface built using React Native.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install ReactMusic.
+Use the package manager [npm](https://docs.npmjs.com/cli/install) to install ReactMusic.
 
 ```bash
   react-native run-android # for android  devices.
